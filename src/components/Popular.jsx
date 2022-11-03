@@ -48,6 +48,7 @@ const Card = styled.div`
     overflow: hidden;
 
     img {
+        width: 25%;
         border-radius: 2rem;
     }
 `;
