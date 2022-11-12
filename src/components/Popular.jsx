@@ -60,14 +60,14 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-    min-width: 25rem;
+    min-height: 25rem;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
 
     img {
         border-radius: 1rem;
-        /* position: absolute; */
+        position: absolute;
         left: 0;
         width: 100%;
         height: 100%;
@@ -79,7 +79,7 @@ const Card = styled.div`
         z-index: 10;
         left: 50%;
         bottom: 0%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 0%);
         color: white;
         width: 100%;
         text-align: center;
