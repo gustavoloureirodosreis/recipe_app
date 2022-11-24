@@ -9,22 +9,22 @@ export class Category extends Component {
     render () {
         return (
             <List>
-                <NavLink to={'/cuisine/Italian'}>
+                <SLink to={'/cuisine/Italian'}>
                     <FaPizzaSlice />
                     <h4>Italian</h4>
-                </NavLink>
-                <NavLink to={'/cuisine/American'}>
+                </SLink>
+                <SLink to={'/cuisine/American'}>
                     <FaHamburger />
                     <h4>American</h4>
-                </NavLink>
-                <NavLink to={'/cuisine/Thai'}>
+                </SLink>
+                <SLink to={'/cuisine/Thai'}>
                     <GiNoodles />
                     <h4>Thai</h4>
-                </NavLink>
-                <NavLink to={'/cuisine/Japanese'}>
+                </SLink>
+                <SLink to={'/cuisine/Japanese'}>
                     <GiChopsticks />
                     <h4>Japanese</h4>
-                </NavLink>
+                </SLink>
             </List>
         )
     }
@@ -36,6 +36,44 @@ const List = styled.div`
     align-items: center;
     padding: 1rem 2rem;
     margin: 2rem 0;
+`;
+
+const SLink = styled(NavLink)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-right: 2rem;
+    background: linear-gradient(35deg, #494949, #313131);
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    transform: scale(0.8);
+
+    h4 {
+        color: #fff;
+        font-size: 0.8rem;
+
+    }
+
+    svg {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
+    &.active {
+        background: linear-gradient(to right, #f27121, #e94057);
+
+        svg {
+            color: #fff;
+        }
+
+        h4 {
+            color: #fff;
+        }
+    }
 `;
 
 
